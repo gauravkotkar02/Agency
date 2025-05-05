@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1e1f3b] text-white font-sans">
+  <!-- Navbar Section -->
+<header class="bg-[#1e1f3b] text-white py-4">
+  <nav class="max-w-7xl mx-auto px-6 md:px-0  py-4 flex justify-between items-center relative">
+    
+    <!-- Logo -->
+    <div>
+      <img src="images/logo.png" alt="Logo" class="h-14">
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8 text-lg">
+      <a href="other.html">About</a>
+      <a href="other.html">Services</a>
+      <a href="nextpage.html">Pricing</a>
+      <a href="work.html">Blog</a>
+    </div>
+
+    <!-- Contact Button -->
+    <button class="hidden md:inline-block text-white border border-gray-500 px-6 py-2 rounded font-semibold text-sm">
+      <a href="contact.html">Contact Us</a>
+    </button>
+
+    <!-- Hamburger Icon -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden space-y-4 text-lg">
+    <a href="other.html" class="block">About</a>
+    <a href="other.html" class="block">Services</a>
+    <a href="nextpage.html" class="block">Pricing</a>
+    <a href="work.html" class="block">Blog</a>
+    <button class="md:inline-block text-white border border-gray-500 px-6 py-2 rounded font-semibold text-sm">
+      <a href="contact.html">Contact Us</a>
+    </button>
+  </div>
+</header>
+
+<!-- Toggle Script -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+<!-- Hero Section -->
+<section class="px-6 md:px-20 py-16 grid md:grid-cols-2 gap-6 items-center">
+  
+  <!-- Mobile-only image (above text) -->
+  <div class="md:hidden flex justify-center mb-6">
+    <img src="images/pic.png" alt="Laptop" class="w-[250px]" />
+  </div>
+
+  <!-- Left text and star -->
+  <div style="margin-left: 70px;">
+    <div class="relative">
+      <!-- Star image - hidden on mobile -->
+      <img src="images/Star.png" alt="Star"
+           class="hidden md:block absolute w-[150px] top-14 left-60 -translate-y-10 -z-10" />
+      
+      <p class="text-orange-400 tracking-widest text-lg mb-1">MODERN STUDIO</p><br>
+
+      <h1 class="text-6xl md:text-6xl font-extrabold leading-tight">
+        We’re Help<br />
+        To Build Your<br />
+        <span>Dream Project</span>
+      </h1>
+    </div>
+
+    <br>
+
+    <p class="mt-4 text-gray-400 text-lg max-w-md">
+      Agency provides a full service range including technical skills, design, business understanding.
+    </p>
+    <div class="mt-6 flex space-x-4">
+      <button class="bg-orange-500 text-white px-6 py-3 rounded font-semibold text-sm">HOW WE WORK</button>
+      <button class="text-white border border-gray-700 px-6 py-3 rounded font-semibold text-sm"> <a href="contact.html">Contact Us</a></button>
+    </div>
+  </div>
+
+  <!-- Desktop-only image (on right side) -->
+  <div class="hidden md:flex justify-center items-center">
+    <img src="images/pic.png" alt="Laptop" class="z-10" />
+  </div>
+</section>
+
+
+  <!-- Testimonial -->
+  <div class="flex items-center px-6 md:px-20 pb-10" style="margin-left: 70px;">
+    <img src="images/Bitmap.png" class="rounded-full border-2 border-green-400 mr-4" />
+    <p class="text-lg text-gray-300">"Put themselves in the merchant's shoes"<br/><span class="text-white">Meta Inc.</span></p>
+  </div>
+
+</body>
+</html>
+<STYLE>
+    @media (min-width: 768px) {
+    .md\:px-20 {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+</STYLE>
+

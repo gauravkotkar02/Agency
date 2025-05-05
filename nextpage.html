@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing and FAQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#fff4ef] text-[#1e1b2e] font-sans">
+
+  <div class="max-w-6xl mx-auto  py-20">
+
+    <!-- PRICING HEADER -->
+    <section class="text-start mb-16">
+      <p class="text-lg uppercase tracking-widest text-red-400 mb-2">PRICING</p><br>
+      <h2 class="text-6xl font-extrabold text-[#602113]">Check Our<br>Pricing Plans</h2>
+    </section>
+
+    <!-- PRICING CARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 items-start">
+
+
+      <!-- Card 1 -->
+      <div class="bg-[#fff4ef] border border-[#f5d9cd] p-6 px-8 rounded-lg">
+        <p class="uppercase text-lg text-[#da8268] mb-2">Consultation</p><br>
+        <h3 class="text-4xl font-bold mb-4 text-[#602113]">Free</h3>
+        <p class="text-[#602113] text-lg mb-4">Your digital marketing efforts, instead of handling in-house.</p>
+        <ul class="text-left text-lg space-y-2 mb-6 text-[#602113]">
+          <li class="flex items-center gap-2">
+            <img src="images/plus.png" alt="Check Icon" class="w-4 h-4"> Brand Design
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="images/minus.png" alt="Check Icon" class="w-4 h-4"> Market Analysis
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="images/minus.png" alt="Check Icon" class="w-4 h-4"> Production
+          </li>
+        </ul>
+        <button class="bg-white text-[#602113] px-4 py-2 mb-4 rounded text-sm font-bold shadow-md text-[#602113]"> <a href="contact.html">Contact Us</a></button>
+      </div>
+
+      <!-- Card 2 (Highlighted & Taller) -->
+      <div class="bg-white border border-[#f5d9cd] p-8 px-8 rounded-lg shadow-md relative -mt-8 z-10 ">
+
+        <span class="absolute top-4 left-4 bg-red-400 text-white text-lg px-2 py-1 rounded-full font-normal">Popular</span><br><br>
+        <p class="uppercase text-lg text-[#f56b4c] mb-2">Design</p>
+        <h3 class="text-4xl font-bold mb-4 text-[#602113]">$1500</h3>
+        <p class="text-[#602113] text-lg mb-4">Provide your business with a variety of digital solutions to promote.</p>
+        <ul class="text-left text-lg space-y-2 mb-6 text-[#602113]">
+          <li class="flex items-center gap-2">
+            <img src="images/plus.png" alt="Check Icon" class="w-4 h-4"> Brand Design
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="images/plus.png" alt="Check Icon" class="w-4 h-4"> Market Analysis
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="images/minus.png" alt="Check Icon" class="w-4 h-4"> Production
+          </li>
+        </ul>
+        <button class="bg-red-400 text-white px-4 py-2 mb-4 rounded text-sm font-semibold shadow-md"> <a href="contact.html">Contact Us</a></button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-[#fff4ef] border border-[#f5d9cd] p-6 px-8 rounded-lg">
+        <p class="uppercase text-lg text-[#ef7c50] mb-2">Design + Code</p><br>
+        <h3 class="text-4xl font-bold mb-4 text-[#602113]">$2900</h3>
+        <p class="text-[#602113] text-lg mb-4">Help you hit your marketing goals and grow your business.</p>
+        <ul class="text-left text-lg space-y-2 mb-6 text-[#602113]">
+          <li class="flex items-center gap-2">
+            <img src="images/plus.png" alt="Check Icon" class="w-4 h-4"> Brand Design
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="images/plus.png" alt="Check Icon" class="w-4 h-4"> Market Analysis
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="images/plus.png" alt="Check Icon" class="w-4 h-4"> Production
+          </li>
+        </ul>
+        <button class="bg-white text-[#602113] px-4 py-2 mb-6 rounded text-sm font-bold shadow-md"> <a href="contact.html">Contact Us</a></button>
+      </div>
+
+    </div>
+
+    <!-- FAQ SECTION -->
+   <!-- Alpine.js CDN -->
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<!-- FAQ SECTION -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+  <!-- FAQ Text -->
+  <div>
+    <p class="text-lg uppercase tracking-widest text-red-500 mb-2">FAQ</p>
+    <h3 class="text-4xl font-bold mb-4 text-[#602113]">Frequently Asked<br>Questions</h3>
+    <p class="text-base text-[#602113] mb-6 leading-relaxed font-normal">
+      A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.
+    </p>
+    <a href="#" class="text-lg font-bold text-[#602113]">Contact Us</a>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <div class="bg-white  rounded-lg shadow-md " x-data="{ selected: 1 }">
+
+    <!-- Item 1 -->
+    <div class="border rounded">
+      <button @click="selected === 1 ? selected = null : selected = 1"
+              class="w-full flex justify-between items-center px-4 py-4 font-bold text-left text-[#602113] text-xl">
+        A digital agency is a business
+        <div class="bg-red-100 text-red-600 rounded-full p-1">
+          <svg :class="selected === 1 ? 'rotate-180' : ''"
+               class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+      <div x-show="selected === 1" x-collapse class="px-4 pb-4 text-sm text-[#602113]">
+        Digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital
+        solutions to promote your product or service online and help you hit your marketing goals and grow your business.
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="border rounded">
+      <button @click="selected === 2 ? selected = null : selected = 2"
+              class="w-full flex justify-between items-center px-4 py-4 font-bold text-left text-[#602113] text-xl">
+        Hire to outsource your digital
+        <div class="bg-red-100 text-red-600 rounded-full p-1">
+          <svg :class="selected === 2 ? 'rotate-180' : ''"
+               class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+      <div x-show="selected === 2" x-collapse class="px-4 pb-4 text-sm text-[#602113]">
+        You can hire a digital agency to outsource your marketing work so your internal team can focus on other business priorities.
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="border rounded">
+      <button @click="selected === 3 ? selected = null : selected = 3"
+              class="w-full flex justify-between items-center px-4 py-4 font-bold text-left text-[#602113] text-xl">
+        Marketing efforts
+        <div class="bg-red-100 text-red-600 rounded-full p-1">
+          <svg :class="selected === 3 ? 'rotate-180' : ''"
+               class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+      <div x-show="selected === 3" x-collapse class="px-4 pb-4 text-sm text-[#602113]">
+        Marketing efforts include SEO, social media, content, and advertising, managed by the agency to drive business growth.
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="border rounded">
+      <button @click="selected === 4 ? selected = null : selected = 4"
+              class="w-full flex justify-between items-center px-4 py-4 font-bold text-left text-[#602113] text-xl">
+        Can provide your business
+        <div class="bg-red-100 text-red-600 rounded-full p-1">
+          <svg :class="selected === 4 ? 'rotate-180' : ''"
+               class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+      <div x-show="selected === 4" x-collapse class="px-4 pb-4 text-sm text-[#602113]">
+        Digital agencies give you access to specialized skills, tools, and modern strategies to grow your brand effectively.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  </div>
+
+</body>
+</html>
